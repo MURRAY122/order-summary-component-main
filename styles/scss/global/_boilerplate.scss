@@ -1,0 +1,47 @@
+@use "../utils" as u;
+
+*,
+*::before
+*::after{
+    box-sizing: inherit;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    padding: 1rem;
+    margin: auto;
+    background-color: var(--pale-blue-hsl);
+    background-image: url("../../assets/images/pattern-background-mobile.svg");
+    background-repeat: no-repeat;
+    font-family: var(--font-family);
+    font-size: var(--font-md);
+
+    @include u.breakpoint(medium){
+        background-image: url("../../assets/images/pattern-background-desktop.svg");
+    }
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+footer{
+    .attribution {
+        font-size: 0.688rem;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+}

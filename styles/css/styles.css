@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+.section {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--very-pale-blue);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+@media (min-width: 30em) {
+  .section {
+    width: 450px;
+  }
+}
+.section__img {
+  background-image: url("../../assets/images/illustration-hero.svg");
+  height: 164px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media (min-width: 30em) {
+  .section__img {
+    height: 220px;
+  }
+}
+.section__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.7rem;
+}
+@media (min-width: 30em) {
+  .section__content {
+    padding: 1.7rem 2.5rem;
+  }
+}
+.section__content__title {
+  font-size: 1.5rem;
+  font-weight: var(--font-wl);
+}
+@media (min-width: 30em) {
+  .section__content__title {
+    font-size: 29px;
+  }
+}
+.section__content__desc {
+  font-weight: var(--font-wm);
+  color: var(--desaturated-blue-hsl);
+  line-height: 1.6rem;
+  text-align: center;
+}
+.section__content__order {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.5rem 0.8rem;
+  background-color: hsla(var(--pale-blue), 0.2);
+  border-radius: 0.5rem;
+}
+@media (min-width: 30em) {
+  .section__content__order {
+    padding: 0.5rem 2rem 0.5rem 1.5rem;
+  }
+}
+.section__content__order__img {
+  background-image: url("../../assets/images/icon-music.svg");
+  height: 50px;
+  width: 60px;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 50px;
+}
+.section__content__order__desc {
+  display: flex;
+  flex-direction: column;
+}
+.section__content__order__desc__item {
+  font-size: var(--font-md);
+  font-weight: var(--font-wm);
+}
+.section__content__order__desc__price {
+  font-size: var(--font-md);
+  color: var(--desaturated-blue-hsl);
+}
+.section__content__order__link {
+  cursor: pointer;
+  color: var(--bright-blue-hsl);
+  font-size: 14px;
+  font-weight: var(--font-wm);
+  margin-left: auto;
+}
+.section__content__order__link:hover {
+  text-decoration: none;
+  font-weight: var(--font-ws);
+}
+.section__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.5rem 1.2rem 2rem 1.2rem;
+}
+@media (min-width: 30em) {
+  .section__actions {
+    font-size: 15px;
+    padding: 0.5rem 2.5rem 2.5rem 2.5rem;
+  }
+}
+.section__actions__button {
+  font-family: var(--font-family);
+  width: 100%;
+  font-size: 18px;
+  padding: 0.7rem;
+  background-color: var(--bright-blue-hsl);
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0px 15px 20px hsla(var(--bright-blue), 0.3);
+  color: var(--pale-blue-hsl);
+  font-weight: var(--font-wm);
+  cursor: pointer;
+}
+.section__actions__button:hover {
+  background-color: hsla(var(--bright-blue), 0.6);
+}
+@media (min-width: 30em) {
+  .section__actions__button {
+    font-size: 16px;
+  }
+}
+.section__actions__link {
+  color: var(--desaturated-blue-hsl);
+  font-weight: var(--font-wl);
+  text-decoration: none;
+}
+.section__actions__link:hover {
+  color: black;
+}
+
+*,
+*::before *::after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  padding: 1rem;
+  margin: auto;
+  background-color: var(--pale-blue-hsl);
+  background-image: url("../../assets/images/pattern-background-mobile.svg");
+  background-repeat: no-repeat;
+  font-family: var(--font-family);
+  font-size: var(--font-md);
+}
+@media (min-width: 30em) {
+  body {
+    background-image: url("../../assets/images/pattern-background-desktop.svg");
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+footer .attribution {
+  font-size: 0.688rem;
+  text-align: center;
+}
+footer .attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
+
+:root {
+  --pale-blue: 225, 100%, 94%;
+  --pale-blue-hsl: hsl(var(--pale-blue));
+  --bright-blue: 245, 75%, 52%;
+  --bright-blue-hsl: hsl(var(--bright-blue));
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: 224, 23%, 55%;
+  --desaturated-blue-hsl: hsl(var(--desaturated-blue));
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+:root {
+  --font-family: "Red Hat Display", sans-serif;
+  --font-ws: 500;
+  --font-wm: 700;
+  --font-wl: 900;
+  --font-md: 1rem;
+}/*# sourceMappingURL=styles.css.map */

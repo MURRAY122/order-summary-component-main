@@ -1,0 +1,145 @@
+@use "../utils" as u;
+
+.section{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--very-pale-blue);
+    border-radius: 1rem;
+    overflow: hidden;
+
+    @include u.breakpoint(medium){
+        width: 450px;
+    }
+
+    &__img{
+        background-image: url("../../assets/images/illustration-hero.svg");
+        height: 164px;
+        background-position: center;
+        background-repeat: no-repeat; 
+        background-size: contain;
+
+        @include u.breakpoint(medium){
+            height: 220px;
+
+        }
+
+    }
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1.7rem;
+
+        @include u.breakpoint(medium){
+            padding: 1.7rem 2.5rem;
+        }
+
+        &__title{
+            font-size: 1.5rem;
+            font-weight: var(--font-wl);
+
+            @include u.breakpoint(medium){
+                font-size: 29px;
+            }
+        }
+        &__desc{
+            font-weight: var(--font-wm);
+            color: var(--desaturated-blue-hsl);
+            line-height: 1.6rem;
+            text-align: center;
+        }
+        &__order{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: .5rem;
+            width: 100%;
+            margin-top: 1rem;
+            padding: .5rem .8rem;
+            background-color:  hsla(var(--pale-blue),.2);
+            border-radius: .5rem;
+
+            @include u.breakpoint(medium){
+                padding: 0.5rem 2rem 0.5rem 1.5rem;
+            }
+
+            &__img{
+                background-image: url("../../assets/images/icon-music.svg");
+                height: 50px;
+                width: 60px;
+                background-position: left;
+                background-repeat: no-repeat;
+                background-size: 50px;
+            }
+            &__desc{
+                display: flex;
+                flex-direction: column;
+
+                &__item{
+                    font-size: var(--font-md);
+                    font-weight: var(--font-wm);
+                }
+                &__price{
+                    font-size: var(--font-md);
+                    color: var(--desaturated-blue-hsl);
+                }
+            }
+            &__link{
+                cursor: pointer;
+                color: var(--bright-blue-hsl);
+                font-size: 14px;
+                font-weight: var(--font-wm);
+                margin-left: auto;
+
+                &:hover{
+                    text-decoration: none;
+                    font-weight: var(--font-ws);
+                }
+            }
+
+        }
+    }
+
+    &__actions{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 0.5rem 1.2rem 2rem 1.2rem;
+        @include u.breakpoint(medium){
+            font-size: 15px;
+            padding: 0.5rem 2.5rem 2.5rem 2.5rem;
+        }
+        &__button{
+            font-family: var(--font-family);
+            width: 100%;
+            font-size: 18px;
+            padding: .7rem;
+            background-color: var(--bright-blue-hsl);
+            border: none;
+            border-radius: .5rem;
+            box-shadow: 0px 15px 20px hsla(var(--bright-blue), 0.3);
+            color: var(--pale-blue-hsl);
+            font-weight: var(--font-wm);
+            cursor: pointer;
+            &:hover{
+                background-color: hsla(var(--bright-blue),.6);
+            }
+            @include u.breakpoint(medium){
+                font-size: 16px;
+            }
+
+        }
+        &__link{
+            color: var(--desaturated-blue-hsl);
+            font-weight: var(--font-wl);
+            text-decoration: none;
+ 
+            &:hover{
+                color: black;
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+
+
+$breakpoint: (
+    "medium": "30em", //Tablet
+  );
+  
+  @mixin breakpoint($size) {
+    @media (min-width: map-get($breakpoint, $size)) {
+      @content;
+    }
+  }
