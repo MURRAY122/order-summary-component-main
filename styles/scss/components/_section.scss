@@ -16,7 +16,7 @@
         height: 164px;
         background-position: center;
         background-repeat: no-repeat; 
-        background-size: contain;
+        background-size: cover;
 
         @include u.breakpoint(medium){
             height: 220px;
